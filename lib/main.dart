@@ -1,3 +1,4 @@
+import 'package:crootie_store/features/auth_feature/presentation/screeens/profile_screen/profileScreen.dart';
 import 'package:flutter/material.dart';
 
 import 'features/auth_feature/presentation/screeens/login_screen/loginscreen.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
 
-      home: LoginScreen (),
+      home: ProfileScreen (),
     );
   }
 }
