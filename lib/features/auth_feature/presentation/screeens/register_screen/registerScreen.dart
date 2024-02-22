@@ -3,8 +3,8 @@ import 'package:crootie_store/features/auth_feature/presentation/screeens/login_
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/reusable_compnant/buttoncompo.dart';
-import '../../../../../core/reusable_compnant/textfield_compo.dart';
+import '../../../../../core/reusable_compnant/buttonCompo.dart';
+import '../../../../../core/reusable_compnant/textfieldCompo.dart';
 
 class RegisterScreen extends StatelessWidget {
    RegisterScreen({super.key});
