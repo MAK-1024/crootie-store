@@ -7,6 +7,7 @@ class CustomMaterialButton extends StatelessWidget {
   final Color buttonColor;
   final double height;
   final double minWidth;
+  final Icon? icon; // New optional parameter for the icon
 
   const CustomMaterialButton({
     Key? key,
@@ -15,22 +16,34 @@ class CustomMaterialButton extends StatelessWidget {
     required this.buttonColor,
     this.height = 48.0,
     this.minWidth = 320.0,
+    this.icon, // New optional parameter for the icon
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
       onPressed: onPressed,
-      child: Text(
-        buttonText,
-        style: TextStyle(color: Colors.white),
-      ),
       color: buttonColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),
       ),
       height: height,
       minWidth: minWidth,
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          if (icon != null)
+            Text(
+              buttonText,
+              style: TextStyle(color: Colors.white),
+            ),// Show the icon if it is provided
+            Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: icon,
+            ),
+
+        ],
+      ),
     );
   }
 }
