@@ -30,8 +30,7 @@
 // }
 //
 
-
-
+// ignore_for_file: prefer_const_constructors
 
 import 'dart:async';
 import 'package:crootie_store/core/utils/app_color.dart';
@@ -43,17 +42,16 @@ class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _SplashScreenState createState() => _SplashScreenState();
 }
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
-
-
   void initState() {
     super.initState();
 
-    Timer(Duration(seconds: 2), () {
+    Timer(const Duration(seconds: 2), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
@@ -70,6 +68,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          // ignore: prefer_const_literals_to_create_immutables
           children: [
             Text(
               'CROOTIE',
