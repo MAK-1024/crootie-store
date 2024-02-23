@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'features/home_feature/presentation/screens/homeScreen.dart';
+
+import 'features/product_feature/presentation/screens/productDetails_screen/productDetailsScsreen.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
 
-      home: HomePage(),
+      home: productDetailsScreen(),
     );
   }
 }
