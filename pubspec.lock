@@ -194,6 +194,7 @@ packages:
       sha256: "087ce49c3f0dc39180befefc60fdb4acd8f8620e5682fe2476afd0b3688bb4af"
       url: "https://pub.dev"
     source: hosted
+<<<<<<< HEAD
     version: "1.9.0"
   path_provider:
     dependency: transitive
@@ -259,6 +260,17 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
+=======
+    version: "1.8.2"
+  size_config:
+    dependency: "direct main"
+    description:
+      name: size_config
+      sha256: "912d8e55bb563a71e30f66be0719d2a6437c3500adb01b9e52681dc2362d62e0"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.3"
+>>>>>>> 959ebd38ed329825ae7455eba24796833e2ea665
   sky_engine:
     dependency: transitive
     description: flutter
@@ -361,5 +373,10 @@ packages:
     source: hosted
     version: "1.0.4"
 sdks:
+<<<<<<< HEAD
   dart: ">=3.3.0 <4.0.0"
   flutter: ">=3.10.0"
+=======
+  dart: ">=2.19.6 <3.0.0"
+  flutter: ">=1.17.0"
+>>>>>>> 959ebd38ed329825ae7455eba24796833e2ea665

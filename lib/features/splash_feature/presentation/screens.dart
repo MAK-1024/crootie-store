@@ -72,11 +72,11 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             Text(
               'CROOTIE',
-              style: TextStyle(color: Colors.white, fontSize: 48),
+              style: TextStyle(color: Colors.white, fontSize: 48 , fontFamily: "Cairo" ,),
             ),
             Text(
               '- كروتي -',
-              style: TextStyle(color: Colors.white, fontSize: 48),
+              style: TextStyle(color: Colors.white, fontSize: 48 , fontFamily: 'Cairo'),
             ),
           ],
         ),
