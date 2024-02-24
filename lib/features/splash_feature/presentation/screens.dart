@@ -34,7 +34,9 @@
 
 import 'dart:async';
 import 'package:crootie_store/core/utils/app_color.dart';
+import 'package:crootie_store/core/utils/router.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../onboarding_feature/presentation/screens/onboard.dart';
 
@@ -52,12 +54,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
 
     Timer(const Duration(seconds: 2), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) => Onboard(),
-        ),
-      );
+      GoRouter.of(context).push(AppRouter.konBoardingView);
     });
   }
 
@@ -72,11 +69,16 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             Text(
               'CROOTIE',
-              style: TextStyle(color: Colors.white, fontSize: 48 , fontFamily: "Cairo" ,),
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 48,
+                fontFamily: "Cairo",
+              ),
             ),
             Text(
               '- كروتي -',
-              style: TextStyle(color: Colors.white, fontSize: 48 , fontFamily: 'Cairo'),
+              style: TextStyle(
+                  color: Colors.white, fontSize: 48, fontFamily: 'Cairo'),
             ),
           ],
         ),

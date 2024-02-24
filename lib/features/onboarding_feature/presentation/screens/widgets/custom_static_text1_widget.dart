@@ -13,7 +13,7 @@ class CustomText1 extends StatelessWidget {
           : currentPage == 1
               ? "أهلاً و سهلاً بكم"
               : "لنشتري الاشياء الأن",
-      style: AppStyle.onBoardingTextStyle,
+      style: AppStyle.textStyle32,
     );
   }
 }

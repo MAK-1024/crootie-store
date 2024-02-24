@@ -9,9 +9,9 @@ class CustomText2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text(
+    return Text(
       "مرحباً بكم في متجرنا , كبسو كبسو",
-      style: AppStyle.onBoardingTextStyle2,
+      style: AppStyle.textStyle16.copyWith(color: Colors.white),
     );
   }
 }

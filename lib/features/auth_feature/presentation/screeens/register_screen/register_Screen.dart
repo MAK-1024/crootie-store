@@ -1,15 +1,20 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:crootie_store/core/utils/app_color.dart';
-import 'package:crootie_store/features/auth_feature/presentation/screeens/register_screen/register_Screen.dart';
+import 'package:crootie_store/features/auth_feature/presentation/screeens/login_screen/loginscreen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/reusable_compnant/button_compo.dart';
 import '../../../../../core/reusable_compnant/textfieldCompo.dart';
 
-class LoginScreen extends StatelessWidget {
-  LoginScreen({super.key});
+class RegisterScreen extends StatelessWidget {
+  RegisterScreen({super.key});
 
   TextEditingController nameController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passWordController = TextEditingController();
+  TextEditingController rePasswordController = TextEditingController();
+
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   @override
@@ -19,9 +24,9 @@ class LoginScreen extends StatelessWidget {
       child: SafeArea(
         child: Scaffold(
           body: Align(
-            child: Form(
-              key: formKey,
-              child: SingleChildScrollView(
+            child: SingleChildScrollView(
+              child: Form(
+                key: formKey,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -30,7 +35,7 @@ class LoginScreen extends StatelessWidget {
                     ),
 
                     const Text(
-                      'تسجيل الدخول',
+                      'إنشاء حساب ',
                       style: TextStyle(
                           fontSize: 40, fontWeight: FontWeight.normal),
                     ),
@@ -38,7 +43,7 @@ class LoginScreen extends StatelessWidget {
                     // SizedBox(height:5 ,),
 
                     const Text(
-                      'أدخل حسابك وكلمة المرور',
+                      'أدخل بياناتك الشخصية  ',
                       style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w700,
@@ -49,7 +54,7 @@ class LoginScreen extends StatelessWidget {
                       height: 50,
                     ),
                     CustomTextField(
-                      hintText: ' الاسم / الحساب الالكتروني',
+                      hintText: 'الإسم',
                       prefixIcon: Icons.person,
                       controller: nameController,
                       validator: (value) {
@@ -60,9 +65,20 @@ class LoginScreen extends StatelessWidget {
                       },
                     ),
                     CustomTextField(
+                      hintText: 'الحساب الاكتروني',
+                      prefixIcon: Icons.email,
+                      controller: emailController,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'الرجاء ادخال الحساب الالكتروني';
+                        }
+                        return null;
+                      },
+                    ),
+                    CustomTextField(
                       hintText: 'كلمة المرور',
                       prefixIcon: Icons.key,
-                      controller: passwordController,
+                      controller: passWordController,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return 'الرجاء ادخال كلمة المرور';
@@ -71,35 +87,48 @@ class LoginScreen extends StatelessWidget {
                       },
                       isPassword: true,
                     ),
+                    CustomTextField(
+                      hintText: 'تأكبد كلمة المرور',
+                      prefixIcon: Icons.key,
+                      controller: rePasswordController,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'الرجاء تأكيد كلمة المرور ';
+                        }
+                        return null;
+                      },
+                      isPassword: true,
+                    ),
+
                     const SizedBox(
-                      height: 50,
+                      height: 40,
                     ),
 
                     CustomMaterialButton(
                       onPressed: () {
                         if (formKey.currentState!.validate()) ;
                       },
-                      buttonText: 'تسجبل الدخول',
+                      buttonText: 'إنشاء حساب',
                       buttonColor: AppColor.mainColor,
                     ),
                     const SizedBox(
-                      height: 30,
+                      height: 15,
                     ),
 
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Text('ليس لديك حساب ؟'),
+                        const Text('هل لديك حساب ؟'),
                         TextButton(
                             onPressed: () {
                               Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => RegisterScreen()),
+                                    builder: (context) => LoginScreen()),
                               );
                             },
                             child: const Text(
-                              'إنشاء حساب',
+                              'تسجيل الدخول',
                               style: TextStyle(
                                 color: AppColor.mainColor,
                                 decoration: TextDecoration.underline,

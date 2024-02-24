@@ -1,5 +1,8 @@
+import 'package:crootie_store/core/utils/router.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../../../../core/utils/app_color.dart';
 import '../../../../../core/utils/style.dart';
 
 class CustomButton extends StatelessWidget {
@@ -17,10 +20,15 @@ class CustomButton extends StatelessWidget {
               borderSide: BorderSide(color: Colors.white)),
           minWidth: 150,
           color: Colors.white,
-          onPressed: () {},
+          onPressed: () {
+            GoRouter.of(context).push(AppRouter.kHomeView);
+          },
           child: Text(
             "Get Started",
-            style: AppStyle.buttonTextStyle,
+            style: AppStyle.textStyle16.copyWith(
+              color: AppColor.splashBackGroundColor.withOpacity(0.5),
+              fontWeight: FontWeight.bold,
+            ),
           )),
     );
   }

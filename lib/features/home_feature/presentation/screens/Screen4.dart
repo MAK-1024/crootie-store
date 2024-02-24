@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:crootie_store/features/home_feature/presentation/widgets/widgets_of_homescreen.dart/body_of_homescreen.dart';
 import 'package:flutter/material.dart';
 
 class Screen4 extends StatelessWidget {
@@ -6,8 +6,6 @@ class Screen4 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(child: Text('screen 4444'),),
-    );
+    return const Scaffold(body: SafeArea(child: HomeScreenBody()));
   }
 }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:crootie_store/core/utils/app_color.dart';
 
 class CustomMaterialButton extends StatelessWidget {
   final VoidCallback onPressed;
@@ -35,13 +34,12 @@ class CustomMaterialButton extends StatelessWidget {
           if (icon != null)
             Text(
               buttonText,
-              style: TextStyle(color: Colors.white),
-            ),// Show the icon if it is provided
-            Padding(
-              padding: const EdgeInsets.only(right: 8.0),
-              child: icon,
-            ),
-
+              style: const TextStyle(color: Colors.white),
+            ), // Show the icon if it is provided
+          Padding(
+            padding: const EdgeInsets.only(right: 8.0),
+            child: icon,
+          ),
         ],
       ),
     );

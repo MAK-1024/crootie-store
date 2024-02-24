@@ -1,5 +1,4 @@
 import 'package:crootie_store/core/utils/app_color.dart';
-import 'package:crootie_store/core/utils/style.dart';
 import 'package:crootie_store/features/onboarding_feature/presentation/screens/widgets/boxes_widgets.dart';
 import 'package:crootie_store/features/onboarding_feature/presentation/screens/widgets/custom_appbar_widget.dart';
 import 'package:crootie_store/features/onboarding_feature/presentation/screens/widgets/custom_button_widget.dart';

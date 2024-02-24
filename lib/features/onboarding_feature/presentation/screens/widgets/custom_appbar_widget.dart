@@ -16,7 +16,7 @@ class CustomAppbarWidget extends StatelessWidget {
         children: [
           Text(
             "تخطي",
-            style: AppStyle.appBarTextStyle,
+            style: AppStyle.textStyle16,
           )
         ],
       ),

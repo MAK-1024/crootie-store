@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Screen3 extends StatelessWidget {
@@ -6,8 +5,10 @@ class Screen3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(child: Text('screen 3333'),),
+    return const Scaffold(
+      body: Center(
+        child: Text('screen 3333'),
+      ),
     );
   }
 }
