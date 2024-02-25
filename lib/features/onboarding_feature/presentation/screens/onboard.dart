@@ -10,14 +10,14 @@ import 'package:flutter/material.dart';
 
 import 'widgets/custom_static_text2_widget.dart';
 
-class Onboard extends StatefulWidget {
-  const Onboard({super.key});
+class OnboardScreen extends StatefulWidget {
+  const OnboardScreen({super.key});
 
   @override
-  State<Onboard> createState() => _OnboardState();
+  State<OnboardScreen> createState() => _OnboardScreenState();
 }
 
-class _OnboardState extends State<Onboard> {
+class _OnboardScreenState extends State<OnboardScreen> {
   final PageController pageController = PageController();
   int currentPage = 0;
 
