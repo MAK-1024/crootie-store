@@ -1,9 +1,9 @@
 import 'package:crootie_store/features/home_feature/presentation/screens/homeScreen.dart';
-import 'package:crootie_store/features/home_feature/presentation/widgets/widgets_of_homescreen.dart/listview_of_products_widgets/details_of_product_widget.dart';
-import 'package:crootie_store/features/onboarding_feature/presentation/screens/onboard.dart';
-import 'package:crootie_store/features/product_feature/presentation/screens/productDetails_screen/productDetailsScsreen.dart';
-import 'package:crootie_store/features/splash_feature/presentation/screens.dart';
+import 'package:crootie_store/features/product_feature/presentation/screens/productDetailsScsreen.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../features/onboarding_feature/presentation/screens/onboard.dart';
+import '../../features/splash_feature/presentation/splash_screen.dart';
 
 abstract class AppRouter {
   static const kHomeView = '/homeView';
@@ -18,7 +18,7 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: konBoardingView,
-        builder: (context, state) => const Onboard(),
+        builder: (context, state) => const OnboardScreen(),
       ),
       GoRoute(
         path: kHomeView,

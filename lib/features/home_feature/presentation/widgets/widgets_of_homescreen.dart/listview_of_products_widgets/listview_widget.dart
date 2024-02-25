@@ -7,7 +7,7 @@ class ListViewOfBestSeler extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 288,
+      height: 293,
       child: ListView.builder(
           itemCount: 4,
           scrollDirection: Axis.horizontal,
