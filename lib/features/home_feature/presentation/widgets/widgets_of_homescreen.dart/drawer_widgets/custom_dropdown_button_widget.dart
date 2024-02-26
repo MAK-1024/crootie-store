@@ -1,21 +1,25 @@
+import 'package:crootie_store/core/utils/app_color.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/utils/style.dart';
 
 // ignore: must_be_immutable
-class CustomDropDownButton extends StatefulWidget {
+class DropDownButton extends StatefulWidget {
   @override
-  State<CustomDropDownButton> createState() => _CustomDropDownButtonState();
+  State<DropDownButton> createState() => _DropDownButtonState();
 }
 
-class _CustomDropDownButtonState extends State<CustomDropDownButton> {
+class _DropDownButtonState extends State<DropDownButton> {
   String? selectValue;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       child: DropdownButton<String>(
-          icon: const Icon(Icons.keyboard_arrow_down),
+          icon: const Icon(
+            Icons.keyboard_arrow_down,
+            color: AppColor.mainColor,
+          ),
           value: selectValue,
           items: const [
             DropdownMenuItem(

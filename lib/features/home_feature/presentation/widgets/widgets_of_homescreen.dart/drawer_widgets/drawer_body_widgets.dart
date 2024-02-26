@@ -17,16 +17,34 @@ class _DrawerWidgetState extends State<DrawerWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.only(top: 45, bottom: 0, right: 10, left: 15),
+        padding:
+            const EdgeInsets.only(top: 45, bottom: 10, right: 10, left: 15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const HeaderOfDrawer(),
-            const SizedBox(
-              height: 20,
-            ),
-            CustomDropDownButton(),
-            CustomCheckBoxWidget(),
+            DropDownButton(),
+            ListViewOfCheckBoxWidget(),
+            const Spacer(),
+            MaterialButton(
+              height: 46,
+              minWidth: 183,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
+              onPressed: () {},
+              color: AppColor.mainColor,
+              textColor: Colors.white,
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("عرض المنتجات"),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Icon(Icons.arrow_forward)
+                ],
+              ),
+            )
           ],
         ));
   }

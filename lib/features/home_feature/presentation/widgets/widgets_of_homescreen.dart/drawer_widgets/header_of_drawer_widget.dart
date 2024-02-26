@@ -9,13 +9,20 @@ class HeaderOfDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Text(AppString.categoryName,
-            style: GoogleFonts.cairo(textStyle: AppStyle.textStyle20)),
-        const Spacer(),
-        IconButton(onPressed: () {}, icon: const Icon(Icons.close))
-      ],
+    return SizedBox(
+      width: double.infinity,
+      child: Row(
+        children: [
+          Text(AppString.categoryName,
+              style: GoogleFonts.cairo(textStyle: AppStyle.textStyle20)),
+          const Spacer(),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.close),
+            iconSize: 30,
+          )
+        ],
+      ),
     );
   }
 }

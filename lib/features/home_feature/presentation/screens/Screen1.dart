@@ -7,10 +7,11 @@ class Screen1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
         drawer: Drawer(
+          width: 230,
           child: DrawerWidget(),
         ),
-        body: const SafeArea(child: HomeScreenBody()));
+        body: SafeArea(child: HomeScreenBody()));
   }
 }
