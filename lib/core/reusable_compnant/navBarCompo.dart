@@ -22,6 +22,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      iconSize: 18,
+      type: BottomNavigationBarType.fixed,
       currentIndex: widget.currentIndex,
       onTap: widget.onTap,
       items: widget.items,

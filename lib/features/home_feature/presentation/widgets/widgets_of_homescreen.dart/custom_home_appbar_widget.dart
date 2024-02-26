@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CustomHomeAppbarWidget extends StatelessWidget {
-  const CustomHomeAppbarWidget({super.key});
+  const CustomHomeAppbarWidget({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,9 @@ class CustomHomeAppbarWidget extends StatelessWidget {
             height: 35,
             width: 35,
             child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Scaffold.of(context).openDrawer();
+                },
                 icon: const Icon(
                   CupertinoIcons.square_grid_2x2,
                   size: 20,
