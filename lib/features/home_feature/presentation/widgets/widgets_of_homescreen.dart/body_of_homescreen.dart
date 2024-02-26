@@ -45,9 +45,9 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                   setState(() {});
                 },
                 children: [
-                  Image.asset(img4),
-                  Image.asset(img4),
-                  Image.asset(img4)
+                  Image.asset(AppConst.img4),
+                  Image.asset(AppConst.img4),
+                  Image.asset(AppConst.img4)
                 ],
               ),
             ),

@@ -21,7 +21,7 @@ class Page2 extends StatelessWidget {
           Positioned(
             left: 44,
             child: Image.asset(
-              img2,
+              AppConst.img2,
               width: 337,
               height: 456,
             ),

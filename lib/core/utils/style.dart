@@ -8,6 +8,10 @@ abstract class AppStyle {
     color: Colors.grey,
     fontSize: 12,
   );
+  static const TextStyle textStyle_14 = TextStyle(
+      color: AppColor.mainColor,
+      fontSize: 16,
+      );
   static const TextStyle textStyle14 = TextStyle(
       color: AppColor.mainColor,
       fontSize: 16,
@@ -15,6 +19,10 @@ abstract class AppStyle {
   static const TextStyle textStyle16 = TextStyle(
     color: AppColor.appbarWidgetsColor,
     fontSize: 16,
+  );
+  static const TextStyle textStyle18 = TextStyle(
+    color: AppColor.appbarWidgetsColor,
+    fontSize: 18,
   );
   static const TextStyle textStyle24 = TextStyle(
     fontSize: 24,

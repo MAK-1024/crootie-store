@@ -9,7 +9,7 @@ class Screen1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
         drawer: Drawer(
-          width: 230,
+          width: 231,
           child: DrawerWidget(),
         ),
         body: SafeArea(child: HomeScreenBody()));
