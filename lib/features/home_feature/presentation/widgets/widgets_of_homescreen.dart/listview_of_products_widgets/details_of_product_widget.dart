@@ -35,7 +35,7 @@ class DetailsOfItem extends StatelessWidget {
       Padding(
         padding: const EdgeInsets.only(right: 30.0),
         child: Image.asset(
-          img5,
+          AppConst.img5,
           width: 82,
           height: 117,
         ),
