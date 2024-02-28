@@ -1,12 +1,14 @@
 import 'package:crootie_store/core/utils/app_color.dart';
+import 'package:crootie_store/core/utils/router.dart';
 import 'package:crootie_store/features/auth_feature/presentation/screeens/register_screen/register_Screen.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../core/reusable_compnant/button_compo.dart';
 import '../../../../../core/reusable_compnant/textfieldCompo.dart';
 
 class LoginScreen extends StatelessWidget {
-  LoginScreen({super.key});
+   LoginScreen({super.key});
 
   TextEditingController nameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
@@ -78,9 +80,11 @@ class LoginScreen extends StatelessWidget {
                     CustomMaterialButton(
                       onPressed: () {
                         if (formKey.currentState!.validate()) ;
+                        GoRouter.of(context).pushReplacement(AppRouter.kHomeView);
                       },
-                      buttonText: 'تسجبل الدخول',
+                      buttonText: 'تسجيل الدخول',
                       buttonColor: AppColor.mainColor,
+
                     ),
                     const SizedBox(
                       height: 30,
@@ -92,11 +96,7 @@ class LoginScreen extends StatelessWidget {
                         const Text('ليس لديك حساب ؟'),
                         TextButton(
                             onPressed: () {
-                              Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => RegisterScreen()),
-                              );
+                              GoRouter.of(context).pushReplacement(AppRouter.kRegisterScreen);
                             },
                             child: const Text(
                               'إنشاء حساب',

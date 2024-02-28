@@ -3,9 +3,11 @@
 import 'package:crootie_store/core/utils/app_color.dart';
 import 'package:crootie_store/features/auth_feature/presentation/screeens/login_screen/loginscreen.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../core/reusable_compnant/button_compo.dart';
 import '../../../../../core/reusable_compnant/textfieldCompo.dart';
+import '../../../../../core/utils/router.dart';
 
 class RegisterScreen extends StatelessWidget {
   RegisterScreen({super.key});
@@ -14,7 +16,6 @@ class RegisterScreen extends StatelessWidget {
   TextEditingController emailController = TextEditingController();
   TextEditingController passWordController = TextEditingController();
   TextEditingController rePasswordController = TextEditingController();
-
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   @override
@@ -111,6 +112,7 @@ class RegisterScreen extends StatelessWidget {
                       buttonText: 'إنشاء حساب',
                       buttonColor: AppColor.mainColor,
                     ),
+
                     const SizedBox(
                       height: 15,
                     ),
@@ -121,11 +123,8 @@ class RegisterScreen extends StatelessWidget {
                         const Text('هل لديك حساب ؟'),
                         TextButton(
                             onPressed: () {
-                              Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => LoginScreen()),
-                              );
+                              GoRouter.of(context).pushReplacement(AppRouter.kLoginScreen);
+
                             },
                             child: const Text(
                               'تسجيل الدخول',
