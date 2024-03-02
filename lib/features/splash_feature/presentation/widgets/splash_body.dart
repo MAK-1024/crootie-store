@@ -20,7 +20,7 @@ class _SplashBodyState extends State<SplashBody> {
     super.initState();
 
     Timer(const Duration(seconds: 2), () {
-      GoRouter.of(context).push(AppRouter.konBoardingView);
+      GoRouter.of(context).push(AppRouter.kLoginScreen);
     });
   }
 
