@@ -22,7 +22,7 @@ class CustomButton extends StatelessWidget {
           minWidth: 150.w,
           color: Colors.white,
           onPressed: () {
-            GoRouter.of(context).push(AppRouter.kHomeView);
+            GoRouter.of(context).push(AppRouter.kLoginScreen);
           },
           child: Text(
             "Get Started",

@@ -28,20 +28,9 @@ class CustomMaterialButton extends StatelessWidget {
       ),
       height: height,
       minWidth: minWidth,
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          if (icon != null)
-            Text(
-              buttonText,
-              style: const TextStyle(color: Colors.white),
-            ), // Show the icon if it is provided
-          Padding(
-            padding: const EdgeInsets.only(right: 8.0),
-            child: icon,
-          ),
-        ],
-      ),
+      child: Text(buttonText,style: TextStyle(color: Colors.white , fontWeight: FontWeight.bold),), // Show the icon if it is provided
+
+
     );
   }
 }
