@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/utils/style.dart';
 
@@ -11,7 +13,6 @@ class ColorList extends StatefulWidget {
 }
 
 class _ColorListState extends State<ColorList> {
-
   static List<Color> colors = [
     const Color.fromRGBO(155, 66, 6, 1),
     const Color.fromRGBO(17, 0, 215, 1),
@@ -20,51 +21,50 @@ class _ColorListState extends State<ColorList> {
   ];
   int _selectIndex = 0;
 
-
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 38,
+    return Container(
+      height: 34.h,
+      width: double.infinity,
+      margin: const EdgeInsets.only(top: 20, bottom: 20),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          const Padding(
-            padding: EdgeInsets.only(left: 90),
-            child: Text(
-              'الالوان',
-              style:AppStyle.textStyle24,
-            ),
+          Text(
+            'الالوان',
+            style: AppStyle.textStyle24.copyWith(fontWeight: FontWeight.w600),
           ),
+          const Spacer(),
 
-          ListView.builder(
-              shrinkWrap: true,
-              primary: false,
-              scrollDirection: Axis.horizontal,
-              itemCount: colors.length,
-              itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.only(right: 8),
-                  child: GestureDetector(
+          SizedBox(
+            width: 160.w,
+            child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: colors.length,
+                itemBuilder: (context, index) {
+                  return GestureDetector(
                     onTap: () {
                       setState(() {
                         _selectIndex = index;
                       });
                     },
-                    child: CircleAvatar(
-                      radius: 15,
-                      backgroundColor: colors[index],
-                      child: Center(
-                        child: _selectIndex == index
-                            ? const Icon(
-                          Icons.check,
-                          color: Colors.white,
-                        )
-                            : null,
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 8.0),
+                      child: CircleAvatar(
+                        radius: 15,
+                        backgroundColor: colors[index],
+                        child: Center(
+                          child: _selectIndex == index
+                              ? const Icon(
+                                  Icons.check,
+                                  color: Colors.white,
+                                )
+                              : null,
+                        ),
                       ),
                     ),
-                  ),
-                );
-              }),
+                  );
+                }),
+          ),
 
           // Container(
           //   padding: EdgeInsets.only(left: 10,right: 10),

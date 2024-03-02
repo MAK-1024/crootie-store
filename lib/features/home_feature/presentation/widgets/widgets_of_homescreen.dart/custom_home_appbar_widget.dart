@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomHomeAppbarWidget extends StatelessWidget {
   const CustomHomeAppbarWidget({
@@ -16,15 +17,15 @@ class CustomHomeAppbarWidget extends StatelessWidget {
           color: Colors.white,
           elevation: 1,
           child: SizedBox(
-            height: 35,
-            width: 35,
+            height: 35.h,
+            width: 35.w,
             child: IconButton(
                 onPressed: () {
                   Scaffold.of(context).openDrawer();
                 },
-                icon: const Icon(
+                icon: Icon(
                   CupertinoIcons.square_grid_2x2,
-                  size: 20,
+                  size: 20.sp,
                 )),
           ),
         ),
@@ -35,13 +36,13 @@ class CustomHomeAppbarWidget extends StatelessWidget {
           color: Colors.white,
           elevation: 1,
           child: SizedBox(
-            height: 35,
-            width: 35,
+            height: 35.h,
+            width: 35.w,
             child: IconButton(
                 onPressed: () {},
-                icon: const Icon(
+                icon: Icon(
                   CupertinoIcons.bell,
-                  size: 20,
+                  size: 20.sp,
                 )),
           ),
         ),

@@ -15,10 +15,7 @@ class SplashBody extends StatefulWidget {
   State<SplashBody> createState() => _SplashBodyState();
 }
 
-
 class _SplashBodyState extends State<SplashBody> {
-
-
   void initState() {
     super.initState();
 
@@ -31,18 +28,13 @@ class _SplashBodyState extends State<SplashBody> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColor.splashBackGroundColor,
-      body:  Center(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           // ignore: prefer_const_literals_to_create_immutables
           children: [
-            Text(
-              AppString.splashName1,
-              style: AppStyle.textStyle48),
-
-            Text(
-                AppString.splashName2,
-              style: AppStyle.textStyle48),
+            Text(AppString.splashName1, style: AppStyle.textStyle48),
+            Text(AppString.splashName2, style: AppStyle.textStyle48),
           ],
         ),
       ),

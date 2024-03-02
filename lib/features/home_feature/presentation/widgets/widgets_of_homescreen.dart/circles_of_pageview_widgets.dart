@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/utils/app_color.dart';
 
@@ -30,8 +31,8 @@ class CirclesWidets extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
       ),
       margin: const EdgeInsets.only(left: 7),
-      height: 8,
-      width: isActive ? 24 : 8,
+      height: 8.h,
+      width: isActive ? 24.w : 8.w,
     );
   }
 }

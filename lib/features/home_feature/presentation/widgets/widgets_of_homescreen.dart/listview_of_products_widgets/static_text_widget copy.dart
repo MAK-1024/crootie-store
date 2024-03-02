@@ -15,7 +15,7 @@ class StaticText extends StatelessWidget {
         ),
         const Spacer(),
         TextButton(
-          child: const Text(
+          child: Text(
             "المزيد",
             style: AppStyle.textStyle14,
           ),

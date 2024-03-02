@@ -1,5 +1,6 @@
-import 'package:flutter/cupertino.dart';
+import 'package:crootie_store/core/utils/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/utils/app_color.dart';
 
@@ -8,36 +9,26 @@ class ImageList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-
-
-    final List<String> imageUrls = [
-      'https://i5.walmartimages.com/asr/96554892-e5ec-4838-9cad-449077916242_1.4d5a8a03103fc019f5214f4478df5e1e.jpeg',
-      'https://i5.walmartimages.com/asr/96554892-e5ec-4838-9cad-449077916242_1.4d5a8a03103fc019f5214f4478df5e1e.jpeg',
-      'https://i5.walmartimages.com/asr/96554892-e5ec-4838-9cad-449077916242_1.4d5a8a03103fc019f5214f4478df5e1e.jpeg',
-      'https://i5.walmartimages.com/asr/96554892-e5ec-4838-9cad-449077916242_1.4d5a8a03103fc019f5214f4478df5e1e.jpeg',
-    ];
-
-
     return SizedBox(
-      height: 100,
+      height: 114.h,
+      width: 365.w,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount: imageUrls.length,
+        itemCount: 5,
         itemBuilder: (context, index) {
           return Container(
-            height: 80,
-            width: 80,
-            margin: const EdgeInsets.only(right: 15),
-            padding: const EdgeInsets.all(5),
+            height: 114.h,
+            width: 111.w,
+            margin: const EdgeInsets.only(left: 15),
+            padding: const EdgeInsets.symmetric(vertical: 7),
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(5),
               border: Border.all(
                 color: AppColor.mainColor,
               ),
             ),
-            child: Image.network(imageUrls[index]),
+            child: Image.asset(AppConst.img5),
           );
         },
       ),

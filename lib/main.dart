@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'core/utils/router.dart';
@@ -12,14 +13,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        textTheme: GoogleFonts.tajawalTextTheme(),
-      ),
-
-      // home: const SplashScreen(),
-      routerConfig: AppRouter.router,
+    return ScreenUtilInit(
+      designSize: const Size(360, 800),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: ((context, child) {
+        return MaterialApp.router(
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            textTheme: GoogleFonts.tajawalTextTheme(),
+          ),
+          routerConfig: AppRouter.router,
+        );
+      }),
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:crootie_store/features/onboarding_feature/presentation/screens/widgets/page_one_widgets/page1_containerclipper.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../../core/utils/constants.dart';
 
@@ -22,8 +23,8 @@ class Page1 extends StatelessWidget {
             left: 44,
             child: Image.asset(
               AppConst.img1,
-              width: 351,
-              height: 456,
+              width: 352.w,
+              height: 456.h,
             ),
           )
         ],

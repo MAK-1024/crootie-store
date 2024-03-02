@@ -21,7 +21,7 @@ class _DropDownButtonState extends State<DropDownButton> {
             color: AppColor.mainColor,
           ),
           value: selectValue,
-          items: const [
+          items: [
             DropdownMenuItem(
               value: "رجال",
               child: Text(
@@ -31,11 +31,17 @@ class _DropDownButtonState extends State<DropDownButton> {
             ),
             DropdownMenuItem(
               value: "نساء",
-              child: Text("نساء"),
+              child: Text(
+                "نساء",
+                style: AppStyle.textStyle20,
+              ),
             ),
             DropdownMenuItem(
               value: "اطفال",
-              child: Text("اطفال"),
+              child: Text(
+                "اطفال",
+                style: AppStyle.textStyle20,
+              ),
             ),
           ],
           onChanged: (value) {

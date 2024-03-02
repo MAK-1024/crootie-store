@@ -1,13 +1,16 @@
 import 'package:crootie_store/core/utils/style.dart';
+import 'package:crootie_store/features/product_feature/presentation/screens/widgets/coustom_appbar_of_productdetails_widget.dart';
 import 'package:crootie_store/features/product_feature/presentation/screens/widgets/image_list_widget.dart';
 import 'package:crootie_store/features/product_feature/presentation/screens/widgets/main_image_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/reusable_compnant/button_compo.dart';
 import '../../../../../core/utils/app_color.dart';
 import '../../../../../core/utils/router.dart';
+import '../../../../selected_products_features/presentation/widgets/custom_products_appbar_widget.dart';
 import 'color_list_widget.dart';
 
 class ProductDetailsBody extends StatefulWidget {
@@ -18,93 +21,51 @@ class ProductDetailsBody extends StatefulWidget {
 }
 
 class _ProductDetailsBodyState extends State<ProductDetailsBody> {
-
-
-
-
-
   @override
   Widget build(BuildContext context) {
-    return Directionality(
-      textDirection: TextDirection.rtl,
-      child: Scaffold(
-          backgroundColor: Colors.white,
-          appBar: AppBar(
-              backgroundColor: Colors.white,
-              elevation: 0,
-              actions: [
-                IconButton(
-                  onPressed: ()
-                  {
-                    GoRouter.of(context).push(AppRouter.kHomeView);
-                  },
-                  icon: const Icon(
-                    Icons.arrow_forward,
-                    color: Colors.black,
-                  ),
-                ),
-              ],
-              leading: IconButton(
-                  onPressed: () {},
-                  icon: const Material(
-                    elevation: 3,
-                    shape: CircleBorder(),
-                    child: CircleAvatar(
-                        backgroundColor: Colors.white,
-                        radius: 20,
-                        child: Icon(
-                          Icons.favorite,
-                          color: AppColor.mainColor,
-                        )),
-                  ))),
-          body: Column(children: [
-            const MainImage(),
-            const Padding(
-              padding: EdgeInsets.only(left: 220),
-              child: Text(
-                'معطف شتوي',
-                style:AppStyle.textStyle24,
-              ),
-            ),
-            const Padding(
-              padding: EdgeInsets.only(left: 300),
-              child: Text(
-                'نسائي',
-                style:AppStyle.textStyle16,
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const ColorList(),
-            const SizedBox(
-              height: 20,
-            ),
-            const ImageList(),
-            const SizedBox(
-              height: 20,
-            ),
-            const Padding(
-              padding: EdgeInsets.only(left: 290),
-              child: Text(
-                'الوصف',
-                style:AppStyle.textStyle24,
-              ),
-            ),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                'فهذه السترة المصنوعة من اقمشة فاخرة كالصوف الناعم، الكشمير الناعم، او خلاطات الحرير الناعم، لا تشعّ الاناقة فحسب، بل تضمن ايضا الراحة والقدرة على التحمل. وغالبا ما يتضمن تصميمها الرائع غلافا ذا صدر واحد مع ازرار لذيذة، مما يخلق نقطة مركزية تكمِّل تطور السترة عموما.',
-                style: TextStyle(fontSize: 12, color: Colors.grey),
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                CustomMaterialButton(
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 12),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        const AppbarOfProductScreen(),
+        const MainImage(),
+        SizedBox(
+          height: 30.h,
+        ),
+        Text(
+          'معطف شتوي',
+          style: AppStyle.textStyle24.copyWith(fontWeight: FontWeight.w600),
+        ),
+        SizedBox(
+          height: 5.h,
+        ),
+        Text(
+          'نسائي',
+          style: AppStyle.textStyle16.copyWith(fontWeight: FontWeight.w600),
+          textAlign: TextAlign.end,
+        ),
+        const ColorList(),
+        const ImageList(),
+        const Spacer(),
+        Text(
+          'الوصف',
+          style: AppStyle.textStyle24.copyWith(fontWeight: FontWeight.w600),
+        ),
+        const Spacer(),
+        const Text(
+          maxLines: 5,
+          'فهذه السترة المصنوعة من اقمشة فاخرة كالصوف الناعم، الكشمير الناعم، او خلاطات الحرير الناعم، لا تشعّ الاناقة فحسب، بل تضمن ايضا الراحة والقدرة على التحمل. وغالبا ما يتضمن تصميمها الرائع غلافا ذا صدر واحد مع ازرار لذيذة، مما يخلق نقطة مركزية تكمِّل تطور السترة عموما.',
+          style: TextStyle(
+              fontSize: 12, color: Colors.grey, fontWeight: FontWeight.w600),
+        ),
+        const Spacer(),
+        SizedBox(
+          height: 46.h,
+          width: double.infinity,
+          child: Row(
+            children: [
+              SizedBox(
+                width: 168.h,
+                child: CustomMaterialButton(
                   onPressed: () {},
                   icon: const Icon(
                     Icons.shopping_bag_outlined,
@@ -112,27 +73,28 @@ class _ProductDetailsBodyState extends State<ProductDetailsBody> {
                   ),
                   buttonText: 'اشتري الأن ',
                   buttonColor: AppColor.mainColor,
-                  height: 48,
-                  minWidth: 180,
                 ),
-                const Row(
-                  children: [
-                    Text(
-                      '255.83',
-                      style: TextStyle(fontSize: 24),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Text(
-                      "د.ل",
-                      style: TextStyle(fontSize: 24, color: AppColor.mainColor),
-                    ),
-                  ],
-                )
-              ],
-            ),
-          ])),
+              ),
+              const Spacer(),
+              Row(
+                children: [
+                  const Text(
+                    '255.83',
+                    style: TextStyle(fontSize: 24),
+                  ),
+                  SizedBox(
+                    width: 5.w,
+                  ),
+                  const Text(
+                    "د.ل",
+                    style: TextStyle(fontSize: 24, color: AppColor.mainColor),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
+      ]),
     );
   }
 }

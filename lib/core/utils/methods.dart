@@ -1,6 +1,7 @@
 import 'package:crootie_store/core/utils/app_color.dart';
 import 'package:crootie_store/core/utils/style.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 BottomNavigationBarItem buildBottomNavBarItem({
   required IconData icon,
@@ -21,8 +22,8 @@ BottomNavigationBarItem buildBottomNavBarItem({
                     : const EdgeInsets.all(0),
             child: Container(
               padding: const EdgeInsets.only(right: 6),
-              height: 32,
-              width: 82,
+              height: 32.h,
+              width: 82.w,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 color: const Color(0xffE5E5FC),

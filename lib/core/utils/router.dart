@@ -1,5 +1,6 @@
 import 'package:crootie_store/features/home_feature/presentation/screens/homeScreen.dart';
 import 'package:crootie_store/features/product_feature/presentation/screens/productDetailsScsreen.dart';
+import 'package:crootie_store/features/selected_products_features/presentation/screens/selected_products.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../features/onboarding_feature/presentation/screens/onboard.dart';
@@ -9,6 +10,7 @@ abstract class AppRouter {
   static const kHomeView = '/homeView';
   static const kProductDetailsView = '/productDetailsView';
   static const konBoardingView = '/onBoardingView';
+  static const kSelectedProducts = '/selectedProducts';
 
   static final router = GoRouter(
     routes: [
@@ -27,6 +29,10 @@ abstract class AppRouter {
       GoRoute(
         path: kProductDetailsView,
         builder: (context, state) => const ProductDetailsScreen(),
+      ),
+      GoRoute(
+        path: kSelectedProducts,
+        builder: (context, state) => const SelectedProducts(),
       ),
     ],
   );

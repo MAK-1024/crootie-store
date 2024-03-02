@@ -1,5 +1,6 @@
 import 'package:crootie_store/core/utils/router.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/app_color.dart';
@@ -18,7 +19,7 @@ class CustomButton extends StatelessWidget {
           padding: const EdgeInsets.only(top: 5),
           shape: const OutlineInputBorder(
               borderSide: BorderSide(color: Colors.white)),
-          minWidth: 150,
+          minWidth: 150.w,
           color: Colors.white,
           onPressed: () {
             GoRouter.of(context).push(AppRouter.kHomeView);

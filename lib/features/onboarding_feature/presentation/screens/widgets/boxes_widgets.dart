@@ -1,5 +1,6 @@
 import "package:crootie_store/core/utils/app_color.dart";
 import "package:flutter/material.dart";
+import "package:flutter_screenutil/flutter_screenutil.dart";
 
 class Boxes extends StatelessWidget {
   const Boxes({Key? key, required this.currentPage}) : super(key: key);
@@ -14,8 +15,8 @@ class Boxes extends StatelessWidget {
         children: [
           Container(
             margin: const EdgeInsets.only(right: 9),
-            height: 15,
-            width: 15,
+            height: 15.h,
+            width: 15.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(4),
               color: currentPage == 0
@@ -25,8 +26,8 @@ class Boxes extends StatelessWidget {
           ),
           Container(
             margin: const EdgeInsets.only(right: 9),
-            height: 15,
-            width: 15,
+            height: 15.h,
+            width: 15.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(4),
               color: currentPage == 1
@@ -35,8 +36,8 @@ class Boxes extends StatelessWidget {
             ),
           ),
           Container(
-            height: 15,
-            width: 15,
+            height: 15.h,
+            width: 15.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(4),
               color: currentPage == 2

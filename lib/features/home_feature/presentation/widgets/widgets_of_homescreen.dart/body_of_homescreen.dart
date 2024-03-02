@@ -6,6 +6,7 @@ import 'package:crootie_store/features/home_feature/presentation/widgets/widgets
 import 'package:crootie_store/features/home_feature/presentation/widgets/widgets_of_homescreen.dart/listview_of_products_widgets/static_text_widget%20copy.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeScreenBody extends StatefulWidget {
   const HomeScreenBody({super.key});
@@ -27,17 +28,18 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 15, right: 10, left: 10),
+      padding: const EdgeInsets.only(top: 15, right: 8, left: 8),
       child: SingleChildScrollView(
         child: Column(
           children: [
             const CustomHomeAppbarWidget(),
             Container(
               margin: const EdgeInsets.only(top: 10),
-              height: 165,
-              width: 319,
-              decoration:
-                  BoxDecoration(borderRadius: BorderRadius.circular(10)),
+              height: 165.h,
+              width: 319.w,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+              ),
               child: PageView(
                 controller: pageController,
                 onPageChanged: (page) {
@@ -45,20 +47,22 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                   setState(() {});
                 },
                 children: [
-                  Image.asset(AppConst.img4),
+                  Image.asset(
+                    AppConst.img4,
+                  ),
                   Image.asset(AppConst.img4),
                   Image.asset(AppConst.img4)
                 ],
               ),
             ),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: 15.h,
             ),
             CirclesWidets(
               currentPage: currentPage,
             ),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: 10.h,
             ),
             const StaticText(),
             const ListViewOfBestSeler(),

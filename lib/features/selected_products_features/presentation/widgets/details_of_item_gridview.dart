@@ -6,8 +6,8 @@ import '../../../../../../core/utils/app_color.dart';
 import '../../../../../../core/utils/constants.dart';
 import '../../../../../../core/utils/style.dart';
 
-class DetailsOfItem extends StatelessWidget {
-  const DetailsOfItem({super.key});
+class DetailsOfGridViewItem extends StatelessWidget {
+  const DetailsOfGridViewItem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,28 +20,29 @@ class DetailsOfItem extends StatelessWidget {
             color: Colors.white,
             elevation: 1,
             child: SizedBox(
-              height: 30.h,
-              width: 30.w,
+              height: 24.h,
+              width: 24.w,
               child: IconButton(
+                  padding: const EdgeInsets.all(0),
                   onPressed: () {},
                   icon: const Icon(
                     CupertinoIcons.heart,
-                    size: 18,
+                    size: 14,
                   )),
             ),
           ),
         ],
       ),
       Padding(
-        padding: const EdgeInsets.only(right: 40.0, bottom: 3),
+        padding: const EdgeInsets.only(right: 40.0, bottom: 5),
         child: Image.asset(
           AppConst.img5,
-          width: 82.w,
-          height: 117.h,
+          width: 64.w,
+          height: 92.h,
         ),
       ),
       Text(
-        "جاكيت شبابي",
+        "رجالي",
         style: AppStyle.textStyle12,
       ),
       Text(
@@ -50,28 +51,31 @@ class DetailsOfItem extends StatelessWidget {
             .copyWith(color: Colors.black, decoration: TextDecoration.none),
       ),
       SizedBox(
-        height: 10.h,
+        height: 5.h,
       ),
       Row(
         children: [
           Text(
-            "متوفر 3 قطع",
+            "متوفر",
             style: AppStyle.textStyle12,
           ),
           const Spacer(),
           Text(
             "109.99",
-            style: AppStyle.textStyle16
-                .copyWith(color: Colors.black, fontWeight: FontWeight.bold),
+            style: AppStyle.textStyle14.copyWith(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                decoration: TextDecoration.none),
           ),
           SizedBox(
             width: 5.w,
           ),
           Text(
             "د ل",
-            style: AppStyle.textStyle16.copyWith(
+            style: AppStyle.textStyle14.copyWith(
                 color: AppColor.mainColor.withOpacity(0.5),
-                fontWeight: FontWeight.bold),
+                fontWeight: FontWeight.normal,
+                decoration: TextDecoration.none),
           ),
         ],
       )

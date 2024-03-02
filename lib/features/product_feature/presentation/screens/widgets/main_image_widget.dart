@@ -1,4 +1,6 @@
+import 'package:crootie_store/core/utils/constants.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MainImage extends StatelessWidget {
   const MainImage({super.key});
@@ -6,11 +8,12 @@ class MainImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 230,
-      child: AspectRatio(
-        aspectRatio: 1,
-        child: Image.network(
-            'https://th.bing.com/th/id/OIP.GKUJU3E9IgYXuSmjxKKIUQHaJ3?rs=1&pid=ImgDetMain'),
+      height: MediaQuery.of(context).size.height * .25,
+      width: double.infinity,
+      child: Image.asset(
+        AppConst.img5,
+        fit: BoxFit.fitHeight,
+        alignment: Alignment.center,
       ),
     );
   }

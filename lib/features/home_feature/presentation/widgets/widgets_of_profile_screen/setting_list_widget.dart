@@ -1,3 +1,4 @@
+import 'package:crootie_store/core/utils/style.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -16,12 +17,15 @@ class SettingList extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          const ListTile(
+          ListTile(
             leading: const Icon(
               Icons.person_pin,
               color: AppColor.mainColor,
             ),
-            title: const Text('إعدادات الحساب'),
+            title: Text(
+              'إعدادات الحساب',
+              style: AppStyle.textStyle16.copyWith(color: Colors.black),
+            ),
             trailing: const Icon(
               Icons.arrow_forward_ios,
               color: AppColor.mainColor,
@@ -32,7 +36,10 @@ class SettingList extends StatelessWidget {
               Icons.logout,
               color: AppColor.mainColor,
             ),
-            title: const Text('تسجيل الخروج'),
+            title: Text(
+              'تسجيل الخروج',
+              style: AppStyle.textStyle16.copyWith(color: Colors.black),
+            ),
             onTap: () {
               // Handle "Rate Us" item tap
             },
@@ -55,7 +62,9 @@ class SettingList extends StatelessWidget {
               Icons.notifications_none_outlined,
               color: AppColor.mainColor,
             ),
-            title: const Text('الاشعارات'),
+            title: Text(
+                style: AppStyle.textStyle16.copyWith(color: Colors.black),
+                'الاشعارات'),
             trailing: const Icon(
               Icons.arrow_forward_ios,
               color: AppColor.mainColor,
@@ -69,7 +78,10 @@ class SettingList extends StatelessWidget {
               Icons.phone,
               color: AppColor.mainColor,
             ),
-            title: const Text('تواصل معنا'),
+            title: Text(
+              'تواصل معنا',
+              style: AppStyle.textStyle16.copyWith(color: Colors.black),
+            ),
             trailing: const Icon(
               Icons.arrow_forward_ios,
               color: AppColor.mainColor,
@@ -83,7 +95,10 @@ class SettingList extends StatelessWidget {
               Icons.copy,
               color: AppColor.mainColor,
             ),
-            title: const Text('سياسة التوصيل والاسترجاع '),
+            title: Text(
+              'سياسة التوصيل والاسترجاع ',
+              style: AppStyle.textStyle16.copyWith(color: Colors.black),
+            ),
             trailing: const Icon(
               Icons.arrow_forward_ios,
               color: AppColor.mainColor,
@@ -97,7 +112,10 @@ class SettingList extends StatelessWidget {
               Icons.edit_note,
               color: AppColor.mainColor,
             ),
-            title: const Text('موافقة على الخصوصية '),
+            title: Text(
+              'موافقة على الخصوصية ',
+              style: AppStyle.textStyle16.copyWith(color: Colors.black),
+            ),
             trailing: const Icon(
               Icons.arrow_forward_ios,
               color: AppColor.mainColor,

@@ -39,6 +39,7 @@ dependencies:
   size_config: ^2.0.3
   google_fonts: ^6.1.0
   go_router: ^13.2.0
+  flutter_screenutil: ^5.9.0
 
 
 dev_dependencies:
