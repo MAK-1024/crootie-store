@@ -1,6 +1,5 @@
 import 'package:crootie_store/core/utils/app_color.dart';
 import 'package:crootie_store/core/utils/router.dart';
-import 'package:crootie_store/core/utils/style.dart';
 import 'package:crootie_store/features/home_feature/presentation/widgets/widgets_of_homescreen.dart/drawer_widgets/custom_checkbox_widget.dart';
 import 'package:crootie_store/features/home_feature/presentation/widgets/widgets_of_homescreen.dart/drawer_widgets/custom_dropdown_button_widget.dart';
 import 'package:crootie_store/features/home_feature/presentation/widgets/widgets_of_homescreen.dart/drawer_widgets/header_of_drawer_widget.dart';
@@ -35,7 +34,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10)),
               onPressed: () {
-                GoRouter.of(context).push(AppRouter.kSelectedProducts);
+                // GoRouter.of(context).push(AppRouter.kSelectedProducts);
               },
               color: AppColor.mainColor,
               textColor: Colors.white,

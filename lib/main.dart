@@ -1,20 +1,14 @@
-<<<<<<< HEAD
 import 'package:crootie_store/core/utils/api_server.dart';
 import 'package:crootie_store/features/auth_feature/data/repository/Auth_repository.dart';
 import 'package:crootie_store/features/auth_feature/presentation/controller/cubit/auth_cubit.dart';
-import 'package:crootie_store/features/auth_feature/presentation/screeens/login_screen/loginscreen.dart';
-import 'package:dio/dio.dart';
-=======
-import 'package:crootie_store/features/auth_feature/presentation/screeens/register_screen/register_Screen.dart';
 import 'package:crootie_store/features/home_feature/presentation/screens/homeScreen.dart';
->>>>>>> 8b8dec6bfb5e7680a242288481a4c404df7f2746
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'core/utils/router.dart';
-import 'features/auth_feature/presentation/screeens/login_screen/loginscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +19,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
     return BlocProvider(
       create: (context) =>
           AuthCubit(ApiService(Dio()), AuthRepo(apiService: ApiService(Dio()))),
@@ -43,16 +36,6 @@ class MyApp extends StatelessWidget {
           );
         }),
       ),
-=======
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        textTheme: GoogleFonts.tajawalTextTheme(),
-      ),
-
-      home: HomePage(),
-      // routerConfig: AppRouter.router,
->>>>>>> 8b8dec6bfb5e7680a242288481a4c404df7f2746
     );
   }
 }

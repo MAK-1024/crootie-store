@@ -14,7 +14,7 @@ class AuthRepo {
     try {
       var data = await apiService.postLogin(
           endPoint: "login", username: username, password: password);
-
+//molkmojopj
       AuthModel a = AuthModel.fromJson(data);
       return Right(a);
     } catch (e) {
